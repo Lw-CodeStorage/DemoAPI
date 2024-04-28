@@ -14,7 +14,7 @@ class UserList(APIView):
         serializer = UserSerializer(data=request.data)  
         if serializer.is_valid():
             # 觸發一個exception
-            # raise Exception('test')
+            #raise Exception('test')
             # 這是一個錯誤的調用
             test = serializer.aaa()
             serializer.save()  

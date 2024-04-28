@@ -19,7 +19,7 @@ class Post(models.Model):
 
 
 class User(models.Model):
-    name = models.CharField()
+    name = models.CharField(max_length=3)
     empno = models.CharField()
 
     class Meta:

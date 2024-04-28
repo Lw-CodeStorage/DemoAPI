@@ -32,7 +32,7 @@ class LogMiddleware:
         response = self.get_response(request)
         
         # 記錄 response
-        logging.info(f"[Response] {response}")
+        logging.info(f"[Response] {response.content}")
         
         return response
     
