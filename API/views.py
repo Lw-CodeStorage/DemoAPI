@@ -13,7 +13,10 @@ class UserList(APIView):
     def post(self,request):
         serializer = UserSerializer(data=request.data)  
         if serializer.is_valid():
-            test = serializer.validate()
+            # 觸發一個exception
+            # raise Exception('test')
+            # 這是一個錯誤的調用
+            test = serializer.aaa()
             serializer.save()  
             return Response({"status": "success", "data": serializer.data}, status=200)  
         else:  
