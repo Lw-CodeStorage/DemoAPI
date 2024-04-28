@@ -6,7 +6,7 @@ class TestMiddleware:
 
     def __call__(self, request):
         
-        return JsonResponse({'data':'身分授權未通過'},status = 401)
+        # return JsonResponse({'data':'身分授權未通過'},status = 401)
 
         # 調用 get_response 方法並獲取 response
         response = self.get_response(request)

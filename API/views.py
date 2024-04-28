@@ -12,8 +12,8 @@ class UserList(APIView):
     
     def post(self,request):
         serializer = UserSerializer(data=request.data)  
-        # raise Exception('error from view ')
-        if serializer.is_valid():  
+        if serializer.is_valid():
+            test = serializer.validate()
             serializer.save()  
             return Response({"status": "success", "data": serializer.data}, status=200)  
         else:  

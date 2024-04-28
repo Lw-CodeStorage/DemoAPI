@@ -11,9 +11,8 @@ class LogMiddleware:
 
     def __call__(self, request):
         
-        return JsonResponse({'error': '我是一個提前回傳的'}, status=500)
         # 記錄基本資訊
-        logger.info(f'')
+        logger.info(f'--------------------------------------------------------------------------------')
         logger.info(f'[Request]: {request.method} {request.path}')
         
         # 記錄 headers
@@ -33,7 +32,7 @@ class LogMiddleware:
         response = self.get_response(request)
         
         # 記錄 response
-        logging.info(f"[Response] {response.status_code} for {request.path}")
+        logging.info(f"[Response] {response}")
         
         return response
     
