@@ -1,0 +1,11 @@
+2024-04-27 23:47:53,595 INFO C:\Users\adamw\OneDrive\桌面\Project\DemoAPI\middleware\LogMiddleware.py changed, reloading.
+2024-04-27 23:47:54,868 INFO Watching for file changes with StatReloader
+2024-04-27 23:49:01,632 INFO C:\Users\adamw\OneDrive\桌面\Project\DemoAPI\middleware\LogMiddleware.py changed, reloading.
+2024-04-27 23:49:02,885 INFO Watching for file changes with StatReloader
+2024-04-27 23:49:09,631 INFO [request] /api/user/
+2024-04-27 23:59:31,282 INFO C:\Users\adamw\OneDrive\桌面\Project\DemoAPI\middleware\LogMiddleware.py changed, reloading.
+2024-04-27 23:59:31,472 INFO [request] /api/user/
+2024-04-27 23:59:32,729 INFO Watching for file changes with StatReloader
+2024-04-27 23:59:40,941 INFO [request] {'Content-Length': '', 'Content-Type': 'text/plain', 'Host': '127.0.0.1:8000', 'Connection': 'keep-alive', 'Sec-Ch-Ua': '"Chromium";v="124", "Microsoft Edge";v="124", "Not-A.Brand";v="99"', 'Sec-Ch-Ua-Mobile': '?0', 'Sec-Ch-Ua-Platform': '"Windows"', 'Upgrade-Insecure-Requests': '1', 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'Sec-Fetch-Site': 'same-origin', 'Sec-Fetch-Mode': 'navigate', 'Sec-Fetch-User': '?1', 'Sec-Fetch-Dest': 'document', 'Referer': 'http://127.0.0.1:8000/api/user/', 'Accept-Encoding': 'gzip, deflate, br, zstd', 'Accept-Language': 'zh-TW,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6', 'Cookie': 'csrftoken=D1oSDpPhRo0Go5e20bDwzzqJJWKAOKki'}
+2024-04-27 23:59:56,192 INFO C:\Users\adamw\OneDrive\桌面\Project\DemoAPI\middleware\LogMiddleware.py changed, reloading.
+2024-04-27 23:59:57,508 INFO Watching for file changes with StatReloader

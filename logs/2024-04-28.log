@@ -1,0 +1,51 @@
+2024-04-28 01:49:14,888 INFO 
+2024-04-28 01:49:14,889 INFO [Request]: POST /api/user/
+2024-04-28 01:49:14,890 INFO Headers: {'Content-Length': '59', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/7.37.3', 'Accept': '*/*', 'Postman-Token': '1f3f1d32-3a4c-4766-9a96-54d934dc78eb', 'Host': '127.0.0.1:8000', 'Accept-Encoding': 'gzip, deflate, br', 'Connection': 'keep-alive'}
+2024-04-28 01:49:14,893 INFO POST Data: {'name': 'aaa', 'empno': 'K08868'}
+2024-04-28 01:49:20,253 INFO [Response] 401 for /api/user/
+2024-04-28 01:49:25,511 WARNING Unauthorized: /api/user/
+2024-04-28 01:55:20,603 INFO 
+2024-04-28 01:55:20,603 INFO [Request]: POST /api/user/
+2024-04-28 01:55:20,604 INFO Headers: {'Content-Length': '59', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/7.37.3', 'Accept': '*/*', 'Postman-Token': '6fbbeb0e-ef7c-460a-8fee-8ebfbfefdee0', 'Host': '127.0.0.1:8000', 'Accept-Encoding': 'gzip, deflate, br', 'Connection': 'keep-alive'}
+2024-04-28 01:55:20,605 INFO POST Data: {'name': 'aaa', 'empno': 'K08868'}
+2024-04-28 01:55:32,925 INFO [Response] 401 for /api/user/
+2024-04-28 01:55:34,620 WARNING Unauthorized: /api/user/
+2024-04-28 01:55:51,032 INFO C:\Users\adamw\OneDrive\桌面\Project\DemoAPI\middleware\TestMiddleware.py changed, reloading.
+2024-04-28 01:55:52,478 INFO Watching for file changes with StatReloader
+2024-04-28 01:55:58,721 INFO 
+2024-04-28 01:55:58,721 INFO [Request]: POST /api/user/
+2024-04-28 01:55:58,722 INFO Headers: {'Content-Length': '59', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/7.37.3', 'Accept': '*/*', 'Postman-Token': '006e7523-a8a2-434a-a3c6-625e4b70e3e4', 'Host': '127.0.0.1:8000', 'Accept-Encoding': 'gzip, deflate, br', 'Connection': 'keep-alive'}
+2024-04-28 01:55:58,723 INFO POST Data: {'name': 'aaa', 'empno': 'K08868'}
+2024-04-28 01:56:07,553 INFO [Response] 500 for /api/user/
+2024-04-28 01:56:10,187 ERROR Internal Server Error: /api/user/
+2024-04-28 01:56:30,871 INFO C:\Users\adamw\OneDrive\桌面\Project\DemoAPI\middleware\TestMiddleware.py changed, reloading.
+2024-04-28 01:56:32,179 INFO Watching for file changes with StatReloader
+2024-04-28 01:56:40,902 INFO 
+2024-04-28 01:56:40,902 INFO [Request]: POST /api/user/
+2024-04-28 01:56:40,902 INFO Headers: {'Content-Length': '59', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/7.37.3', 'Accept': '*/*', 'Postman-Token': '32866874-69cd-47f2-a6ba-eab9251380c6', 'Host': '127.0.0.1:8000', 'Accept-Encoding': 'gzip, deflate, br', 'Connection': 'keep-alive'}
+2024-04-28 01:56:40,904 INFO POST Data: {'name': 'aaa', 'empno': 'K08868'}
+2024-04-28 01:56:58,870 INFO [Response] 500 for /api/user/
+2024-04-28 01:57:04,189 ERROR Internal Server Error: /api/user/
+2024-04-28 02:02:05,037 INFO 
+2024-04-28 02:02:05,038 INFO [Request]: POST /api/user/
+2024-04-28 02:02:05,038 INFO Headers: {'Content-Length': '59', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/7.37.3', 'Accept': '*/*', 'Postman-Token': '56a27fe5-a260-442f-a1b5-91ae66ab1548', 'Host': '127.0.0.1:8000', 'Accept-Encoding': 'gzip, deflate, br', 'Connection': 'keep-alive'}
+2024-04-28 02:02:05,039 INFO POST Data: {'name': 'aaa', 'empno': 'K08868'}
+2024-04-28 02:03:03,292 INFO [Response] 500 for /api/user/
+2024-04-28 02:03:05,565 ERROR Internal Server Error: /api/user/
+2024-04-28 02:03:26,240 INFO C:\Users\adamw\OneDrive\桌面\Project\DemoAPI\middleware\ExceptionMiddleware.py changed, reloading.
+2024-04-28 02:03:27,705 INFO Watching for file changes with StatReloader
+2024-04-28 02:04:40,664 INFO C:\Users\adamw\OneDrive\桌面\Project\DemoAPI\middleware\TestMiddleware.py changed, reloading.
+2024-04-28 02:04:52,814 INFO Watching for file changes with StatReloader
+2024-04-28 02:04:58,553 INFO 
+2024-04-28 02:04:58,554 INFO [Request]: POST /api/user/
+2024-04-28 02:04:58,555 INFO Headers: {'Content-Length': '59', 'Content-Type': 'application/json', 'User-Agent': 'PostmanRuntime/7.37.3', 'Accept': '*/*', 'Postman-Token': 'd49b59ad-5f99-45a5-b429-6a8d1bcf3387', 'Host': '127.0.0.1:8000', 'Accept-Encoding': 'gzip, deflate, br', 'Connection': 'keep-alive'}
+2024-04-28 02:04:58,555 INFO POST Data: {'name': 'aaa', 'empno': 'K08868'}
+2024-04-28 02:05:13,975 INFO [Response] 500 for /api/user/
+2024-04-28 02:05:15,681 ERROR Internal Server Error: /api/user/
+2024-04-28 02:07:52,718 INFO C:\Users\adamw\OneDrive\桌面\Project\DemoAPI\middleware\TestMiddleware.py changed, reloading.
+2024-04-28 02:07:54,105 INFO Watching for file changes with StatReloader
+2024-04-28 02:07:57,836 INFO C:\Users\adamw\OneDrive\桌面\Project\DemoAPI\middleware\ExceptionMiddleware.py changed, reloading.
+2024-04-28 02:07:59,220 INFO Watching for file changes with StatReloader
+2024-04-28 02:08:01,794 INFO C:\Users\adamw\OneDrive\桌面\Project\DemoAPI\middleware\ExceptionMiddleware.py changed, reloading.
+2024-04-28 02:08:55,764 INFO Watching for file changes with StatReloader
+2024-04-28 02:09:10,296 ERROR Internal Server Error: /api/user/
