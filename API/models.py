@@ -8,10 +8,19 @@
 from django.db import models
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=10)
+
+    class Meta:
+        managed = False
+        db_table = 'Category'
+
+
 class Post(models.Model):
     title = models.CharField()
     content = models.CharField()
-    user = models.ForeignKey('User', models.DO_NOTHING)
+    user = models.ForeignKey('User', models.DO_NOTHING,related_name='post') 
+    category = models.ForeignKey('Category', models.DO_NOTHING)
 
     class Meta:
         managed = False
@@ -19,8 +28,10 @@ class Post(models.Model):
 
 
 class User(models.Model):
-    name = models.CharField(max_length=3)
+    name = models.CharField()
     empno = models.CharField()
+    create_dt = models.DateTimeField()
+    update_dt = models.DateTimeField(blank=True, null=True)
 
     class Meta:
         managed = False
