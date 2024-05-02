@@ -15,7 +15,16 @@ class PostList(APIView):
     
 
 class UserList(APIView):
-
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name="query_param",
+                type=OpenApiTypes.STR,
+                description="一個查詢參數",
+                location=OpenApiParameter.QUERY
+            ),
+        ]
+    )
     def get(self,request):
         users = User.objects.all()
         serializer =  UserSerializer(users,many=True)
@@ -32,3 +41,25 @@ class UserList(APIView):
             return Response({"status": "success", "data": serializer.data}, status=200)  
         else:  
             return Response({"status": "error", "data": serializer.errors}, status=400)
+
+    @extend_schema(
+        request=UserSerializer,
+        parameters=[
+            OpenApiParameter(
+                required = True,
+                name="query_param",
+                type=OpenApiTypes.STR,
+                description="一個查詢參數",
+                location=OpenApiParameter.QUERY
+            ),
+        ]
+    )
+    def put(self,request):
+            id = request.query_params.get('id')
+            user = User.objects.get(id=id)
+            serializer = UserSerializer(instance=user,data=request.data)
+            if(serializer.is_valid()):
+                serializer.save()
+                return Response(serializer.data)
+            return Response(serializer.errors, status=400)
+            

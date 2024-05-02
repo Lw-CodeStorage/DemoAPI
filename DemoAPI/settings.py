@@ -159,7 +159,7 @@ LOGGING = {
             'formatter': 'verbose',
             'when': 'midnight', # 每天午夜切割日誌
             'interval': 1, # 每天切割一次
-            'backupCount': 5, # 保留最近的5份日誌文件
+            'backupCount': 2, # 保留最近的5份日誌文件
             'encoding': 'utf-8',
         },
     },

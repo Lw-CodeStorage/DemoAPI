@@ -30,8 +30,8 @@ class Post(models.Model):
 class User(models.Model):
     name = models.CharField()
     empno = models.CharField()
-    create_dt = models.DateTimeField()
-    update_dt = models.DateTimeField(blank=True, null=True)
+    create_dt = models.DateTimeField(auto_now_add=True)
+    update_dt = models.DateTimeField(blank=True, null=True,auto_now=True)
 
     class Meta:
         managed = False
