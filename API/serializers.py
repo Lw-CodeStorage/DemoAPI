@@ -2,18 +2,16 @@ from rest_framework import serializers
 from .models import User,Post
 
 
-class PostSerializer(serializers.ModelSerializer):
-    
-    class Meta:
-        model = Post
-        fields="__all__"
-        depth = 1
+
 
 class UserSerializer(serializers.ModelSerializer):
 
     # 反向關聯
-    post = PostSerializer(many=True, read_only=True)
-
+    
+    post = serializers.StringRelatedField(many=True, read_only=True)
+    # post = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    # post = PostSerializer(many=True, read_only=True)
+   
     # 覆寫 models的create_dt
     create_dt = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S",read_only=True)
     update_dt = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S",read_only=True)
@@ -21,30 +19,25 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields="__all__"
+        depth = 1
+
      
         
        
 
-
-
-
-# class User_Post_Serialize(serializers.ModelSerializer):
+class PostSerializer(serializers.ModelSerializer):
     
-#     # 覆寫 models的create_dt
-#     create_dt = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S")
+    # fk關聯
+    # - 解析成固定欄位
+    # - 要更多個可以多設定
+    usermame = serializers.ReadOnlyField(source="user.name")
+    category = serializers.ReadOnlyField(source="category.name")
 
-#     # 反向關聯
-#     post = PostSerializer(many=True, read_only=True)
+    
+    class Meta:
+        model = Post
+        fields="__all__"
+        # depth = 1
 
-#     class Meta :
-#         model = User
-#         fields="__all__"
 
-# class Post_User_Serialize(serializers.ModelSerializer):
 
-#     # 反向關聯
-#     user = UserSerializer( read_only=True)
-
-#     class Meta :
-#         model = Post
-#         fields="__all__"

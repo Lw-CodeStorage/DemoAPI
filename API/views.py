@@ -12,7 +12,13 @@ class PostList(APIView):
         serializer = PostSerializer(posts,many=True)
         return Response(serializer.data)
     
-    
+    def post(self,request):
+        serializer = PostSerializer(data=request.data)  
+        if serializer.is_valid():
+            serializer.save()  
+            return Response({"status": "success", "data": serializer.data}, status=200)  
+        else:  
+            return Response({"status": "error", "data": serializer.errors}, status=400)
 
 class UserList(APIView):
     @extend_schema(
@@ -26,8 +32,13 @@ class UserList(APIView):
         ]
     )
     def get(self,request):
-        users = User.objects.all()
-        serializer =  UserSerializer(users,many=True)
+        id = request.query_params.get('id')
+        if id is not None:
+            user = User.objects.get(pk=id)
+            serializer =  UserSerializer(user)
+        else:
+            user = User.objects.all()
+            serializer =  UserSerializer(user)
         return Response(serializer.data)
     
     

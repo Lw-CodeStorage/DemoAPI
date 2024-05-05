@@ -152,6 +152,9 @@ LOGGING = {
         },
     },
     'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
         'file': {
             'level': 'DEBUG',
             'class': 'logging.handlers.TimedRotatingFileHandler',
@@ -164,7 +167,7 @@ LOGGING = {
         },
     },
     'root': {
-        'handlers': ['file'],
+        'handlers': ['console','file'],
         'level': 'DEBUG',
     },
 }

@@ -26,6 +26,8 @@ class Post(models.Model):
         managed = False
         db_table = 'Post'
 
+    def __str__(self):
+        return self.title
 
 class User(models.Model):
     name = models.CharField()
