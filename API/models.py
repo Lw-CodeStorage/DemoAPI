@@ -20,7 +20,7 @@ class Post(models.Model):
     title = models.CharField()
     content = models.CharField()
     user = models.ForeignKey('User', models.DO_NOTHING,related_name='post') 
-    category = models.ForeignKey('Category', models.DO_NOTHING)
+    category = models.ForeignKey('Category', models.DO_NOTHING,related_name='post')
 
     class Meta:
         managed = False

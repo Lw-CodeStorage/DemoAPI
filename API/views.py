@@ -2,18 +2,21 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import User,Post
-from .serializers import UserSerializer,PostSerializer
+from .serializers import PostSearch,PostInsert
+from .serializers import UserSerializer
 from drf_spectacular.utils import extend_schema, OpenApiParameter, OpenApiTypes
 
 class PostList(APIView):
 
     def get(self,request):
-        posts = Post.objects.all()
-        serializer = PostSerializer(posts,many=True)
+        # posts = Post.objects.all()
+        # posts = Post.objects.filter(user = 1)
+        posts = Post.objects.filter(content__contains='2')
+        serializer = PostSearch(posts,many=True)
         return Response(serializer.data)
     
     def post(self,request):
-        serializer = PostSerializer(data=request.data)  
+        serializer = PostInsert(data=request.data)  
         if serializer.is_valid():
             serializer.save()  
             return Response({"status": "success", "data": serializer.data}, status=200)  
@@ -21,6 +24,7 @@ class PostList(APIView):
             return Response({"status": "error", "data": serializer.errors}, status=400)
 
 class UserList(APIView):
+
     @extend_schema(
         parameters=[
             OpenApiParameter(
@@ -52,6 +56,7 @@ class UserList(APIView):
             return Response({"status": "success", "data": serializer.data}, status=200)  
         else:  
             return Response({"status": "error", "data": serializer.errors}, status=400)
+
 
     @extend_schema(
         request=UserSerializer,
